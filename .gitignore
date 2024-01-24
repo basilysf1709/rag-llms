@@ -2,3 +2,4 @@
 storage
 data
 model
+.os.env

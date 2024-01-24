@@ -1,11 +1,11 @@
 
 # Target to run your script
-text:
+gpt3:
 	@echo "Running script..."
 	@sleep 1
 	@echo "Loading Environment Variables..."
 	@sleep 1
-	@(export $$(grep -v '^#' .env | xargs) && python3 src/talkToTextFile.py)
+	@(export $$(grep -v '^#' .env | xargs) && python3 src/gpt3-5.py)
 
 # Target to run your script for llama2 model
 llama2:
@@ -13,6 +13,6 @@ llama2:
 	@sleep 1
 	@echo "Loading Environment Variables..."
 	@sleep 1
-	@(export $$(grep -v '^#' .os.env | xargs) && python3 src/openSourceModel.py)
+	@(export $$(grep -v '^#' .os.env | xargs) && python3 src/llama2.py)
 
 .PHONY: run

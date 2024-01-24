@@ -21,5 +21,5 @@ else:
 
 # either way we can now query the index
 query_engine = index.as_query_engine()
-response = query_engine.query("Give me the all the important dates for this course.")
+response = query_engine.query("Does it talk about Obama")
 print(response)
